@@ -1,0 +1,153 @@
+/************************** Codigo por Franco Cagliolo **************************************************************************/
+
+
+*{	padding: 0;	margin: 0;}
+main{	max-width: 1200px;	margin: auto;	text-align: center;	}
+ul{	list-style: none;}
+a{	text-decoration: none; color: black;  }
+a[href="red"] { text-indent: -200000px; color: white; display: block; height: 35px; width: 50px;}
+p { font-family:Scout-Regular;  }
+h1,h2,h3 { text-transform: uppercase; padding: 10px; }
+h1{	  font: 2.7em 'ScoutCond-Regular'; text-align: center;}
+h2{	 font: 2.5em 'ScoutCond-Regular';  }
+h3{  font: 1.2em 'ScoutCond-Regular';}
+
+
+/* Encabezado *****************************************************************************************/
+
+span { color: white; padding: 5px;  font: 1em ScoutCond-Regular; letter-spacing: 2px; }
+	.head  {
+		padding: 5px;
+		color: white;
+		display: flex;
+		justify-content: space-between;
+		background: #262626;
+	}
+	.head ul { display: flex;  }
+	.head ul li:nth-child(1) a {color: white;  display: block; margin-top: 7px; font: 1em ScoutCond-Regular; letter-spacing: 2px;}
+	.head ul li:nth-child(2) a {background: url(../images/Estudio12-Challenge_03.jpg) no-repeat center; border-right: 1px solid white; text-indent: -2000px;}
+	.head ul li:nth-child(3) a {background: url(../images/Estudio12-Challenge_05.jpg) no-repeat center;}
+	.head ul li:nth-child(4) a {background: url(../images/Estudio12-Challenge_10.jpg) no-repeat center;}
+
+
+/* Menu *********************************************************************************************/
+nav ul, .redes ul {
+	display: flex;
+	flex-direction: center;
+	justify-content: center;
+	flex-wrap: wrap;
+
+}
+nav ul li { font: 1.2em ScoutCond-Regular ; }
+nav ul li, .redes ul li { margin: 15px; }
+
+
+/* Banner de envios **********************************************************************************/	
+.banner {
+	background: #193270;
+	text-align: center;
+	padding: 10px;
+}
+.banner p, a { color:white; }
+p > a { font-family:Scout-Thin; }
+img {
+	max-width:100%;
+}
+
+/* Background en h2 *************************************************************************************/
+#hombres, #mujeres{ width: 150px; height: 80px;  }
+#mujeres { background: url(../images/Estudio12-Challenge_20.jpg) no-repeat  ; display: inline-block; vertical-align: middle; }
+#hombres { background: url(../images/Estudio12-Challenge_0534.jpg) no-repeat top; display: inline-block; vertical-align: middle; }
+
+
+/* Slider ********************************************************************************************/
+
+@keyframes slider {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+.slider { overflow: hidden; }
+.slider figure img { width: 20%; float: left; }
+.slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slider infinite; 
+}
+
+
+/* Galeria imagenes **********************************************************************************/
+
+	.boxes {
+		display: flex;
+		
+		justify-content: space-around;
+	
+		
+	}
+	.boxes div{ display: flex; flex:auto;  margin: 10px }
+	.boxes div img { max-width: 100%;  height: auto; flex-grow: 1; }
+
+/* Grilla *********************************************************************************************/
+	.grid { display: flex;	 }
+	 .grid div{	margin: 2px; flex: auto;	 }
+	
+	.grid div:nth-child(2) { display: flex;
+				flex-direction: column;	}
+	.grid div img { max-width: 100%; }
+
+/* Loren ipsum ****************************************************************************************/
+
+	.loren{ padding: 15px;	 }
+	.loren p{   font: 1.2em Scout-Thin ; border-spacing: 2px;}
+		h2 > p { font: 1.2em Scout-Thin  }
+/* Footer *********************************************************************************************/
+
+
+	.redes {  background: #262626;	padding: 10px;}
+	.redes ul li:nth-child(1) a {background: url(../images/Estudio12-Challenge_65.jpg) no-repeat;}
+	.redes ul li:nth-child(2) a {background: url(../images/Estudio12-Challenge_67.jpg) no-repeat;}
+	.redes ul li:nth-child(3) a {background: url(../images/Estudio12-Challenge_69.jpg) no-repeat;}
+	.redes ul li:nth-child(4) a {background: url(../images/Estudio12-Challenge_71.jpg) no-repeat;}
+	.redes ul li:nth-child(5) a {background: url(../images/Estudio12-Challenge_73.jpg) no-repeat;}
+
+	.atencion { display: flex; justify-content: center; padding: 10px;}
+	.atencion ul li { padding: 10px; font: 1em Scout-Regular; }
+
+/* Responsive *****************************************************************************************/
+
+	@media (max-width: 800px){
+ 	.boxes{ flex-wrap: wrap;}
+  	.grid { flex-wrap: wrap; }
+ 	.grid div{ flex-grow: 1; }
+
+	 }
+
+}
+/* Fonts ************************************************************************************************************/
+	@font-face {
+    font-family: Scout-Bold;
+    src: url(../fonts/Scout-Bold.otf);
+}
+	@font-face {
+    font-family: ScoutCond-Regular;
+    src: url(../fonts/ScoutCond-Regular.otf);
+}
+	@font-face {
+    font-family: Scout-Regular;
+    src: url(../fonts/Scout-Regular.otf);
+}	@font-face {
+    font-family: Scout-Thin;
+    src: url(../fonts/Scout-Thin.otf);
+}
