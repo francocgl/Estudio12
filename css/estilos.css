@@ -1,66 +1,47 @@
 /************************** Codigo por Franco Cagliolo **************************************************************************/
 
-
+/* General **********************************************************************************************/
 *{	padding: 0;	margin: 0;}
 main{	max-width: 1200px;	margin: auto;	text-align: center;	}
-ul{	list-style: none;}
-a{	text-decoration: none; color: black;  }
-a[href="red"] { text-indent: -200000px; color: white; display: block; height: 35px; width: 50px;}
+ul{	list-style: none;} a{	text-decoration: none; color: black;  }
+a[href="red"] { text-indent: -200000px; display: block; height: 35px; width: 30px; }
 p { font-family:Scout-Regular;  }
 h1,h2,h3 { text-transform: uppercase; padding: 10px; }
-h1{	  font: 2.7em 'ScoutCond-Regular'; text-align: center;}
+h1{	 font: 2.7em 'ScoutCond-Regular'; text-align: center;}
 h2{	 font: 2.5em 'ScoutCond-Regular';  }
 h3{  font: 1.2em 'ScoutCond-Regular';}
-
+img {max-width: 100%;}
 
 /* Encabezado *****************************************************************************************/
 
-span { color: white; padding: 5px;  font: 1em ScoutCond-Regular; letter-spacing: 2px; }
+	span { color: white; padding: 5px;  font: 1em ScoutCond-Regular; letter-spacing: 2px; }
 	.head  {
 		padding: 5px;
 		color: white;
 		display: flex;
 		justify-content: space-between;
-		background: #262626;
-	}
+		background: #262626;	}
 	.head ul { display: flex;  }
 	.head ul li:nth-child(1) a {color: white;  display: block; margin-top: 7px; font: 1em ScoutCond-Regular; letter-spacing: 2px;}
-	.head ul li:nth-child(2) a {background: url(../images/Estudio12-Challenge_03.jpg) no-repeat center; border-right: 1px solid white; text-indent: -2000px;}
+	.head ul li:nth-child(2) a {background: url(../images/Estudio12-Challenge_03.jpg) no-repeat center; border-right: 1px solid white; }
 	.head ul li:nth-child(3) a {background: url(../images/Estudio12-Challenge_05.jpg) no-repeat center;}
-	.head ul li:nth-child(4) a {background: url(../images/Estudio12-Challenge_10.jpg) no-repeat center;}
+	.head ul li:nth-child(4) a {background: url(../images/Estudio12-Challenge_07.jpg) no-repeat center;}
+	.head ul li:nth-child(5) a {background: url(../images/Estudio12-Challenge_10.jpg) no-repeat center;}
 
 
-/* Menu *********************************************************************************************/
-nav ul, .redes ul {
-	display: flex;
-	flex-direction: center;
-	justify-content: center;
-	flex-wrap: wrap;
+/* Menu / Botonera  *********************************************************************************************/
 
-}
+nav ul, .redes ul {	display: flex;	flex-direction: center;	justify-content: center; flex-wrap: wrap;}
 nav ul li { font: 1.2em ScoutCond-Regular ; }
 nav ul li, .redes ul li { margin: 15px; }
 
-
 /* Banner de envios **********************************************************************************/	
-.banner {
-	background: #193270;
-	text-align: center;
-	padding: 10px;
-}
+
+.banner {	background: #193270; border-bottom: 3px solid pink;	text-align: center;	padding: 10px;}
 .banner p, a { color:white; }
 p > a { font-family:Scout-Thin; }
-img {
-	max-width:100%;
-}
 
-/* Background en h2 *************************************************************************************/
-#hombres, #mujeres{ width: 150px; height: 80px;  }
-#mujeres { background: url(../images/Estudio12-Challenge_20.jpg) no-repeat  ; display: inline-block; vertical-align: middle; }
-#hombres { background: url(../images/Estudio12-Challenge_0534.jpg) no-repeat top; display: inline-block; vertical-align: middle; }
-
-
-/* Slider ********************************************************************************************/
+/* Slider Responsive ********************************************************************************************/
 
 @keyframes slider {
 0% { left: 0%; }
@@ -71,8 +52,7 @@ img {
 70% { left: -200%; }
 75% { left: -300%; }
 95% { left: -300%; }
-100% { left: -400%; }
-}
+100% { left: -400%; }}
 
 .slider { overflow: hidden; }
 .slider figure img { width: 20%; float: left; }
@@ -83,39 +63,40 @@ img {
   left: 0;
   text-align: left;
   font-size: 0;
-  animation: 30s slider infinite; 
-}
+  animation: 30s slider infinite; }
 
 
-/* Galeria imagenes **********************************************************************************/
+/* Background en h2 *************************************************************************************/
 
-	.boxes {
-		display: flex;
-		
-		justify-content: space-around;
-	
-		
-	}
-	.boxes div{ display: flex; flex:auto;  margin: 10px }
-	.boxes div img { max-width: 100%;  height: auto; flex-grow: 1; }
+#hombres, #mujeres{ width: 150px; height: 80px;  }
+#mujeres { background: url(../images/Estudio12-Challenge_20.jpg) no-repeat ; display: inline-block; vertical-align: middle;		 }
+#hombres { background: url(../images/Estudio12-Challenge_0534.jpg) no-repeat top; display: inline-block; vertical-align: middle; }
 
-/* Grilla *********************************************************************************************/
+ /* Galeria de imagenes final *************************************************************************/
+  
+  .galeria{ display: flex; justify-content: space-between; }
+
+/* Boxes 1 y 2 ***************************************************************************************/
+
+	.boxes {display: flex; justify-content: space-between;}
+	.boxes div{ flex: 1; display: flex;}
+
+/* Grilla Imagenes *****************************************************************************************/
+
 	.grid { display: flex;	 }
-	 .grid div{	margin: 2px; flex: auto;	 }
-	
-	.grid div:nth-child(2) { display: flex;
-				flex-direction: column;	}
+	.grid div{	 }
+	.grid div:nth-child(2) { display: flex;	flex-direction: column;	}
 	.grid div img { max-width: 100%; }
 
-/* Loren ipsum ****************************************************************************************/
-
-	.loren{ padding: 15px;	 }
-	.loren p{   font: 1.2em Scout-Thin ; border-spacing: 2px;}
-		h2 > p { font: 1.2em Scout-Thin  }
+/* Texto loren ipsum ****************************************************************************************/
+	
+	h2 + p {  font-size: 1em; margin-bottom: 10px;}
+	.texto { padding: 15px;	 }
+	.texto p{   font: 1.2em Scout-Thin ; border-spacing: 2px;}
+	
 /* Footer *********************************************************************************************/
 
-
-	.redes {  background: #262626;	padding: 10px;}
+	.redes {  background: #262626;	}
 	.redes ul li:nth-child(1) a {background: url(../images/Estudio12-Challenge_65.jpg) no-repeat;}
 	.redes ul li:nth-child(2) a {background: url(../images/Estudio12-Challenge_67.jpg) no-repeat;}
 	.redes ul li:nth-child(3) a {background: url(../images/Estudio12-Challenge_69.jpg) no-repeat;}
@@ -125,17 +106,55 @@ img {
 	.atencion { display: flex; justify-content: center; padding: 10px;}
 	.atencion ul li { padding: 10px; font: 1em Scout-Regular; }
 
-/* Responsive *****************************************************************************************/
+/* Responsive Media Queries *****************************************************************************************/
+	
+	/* Tablet ********************************************************/
+	@media screen and (max-width: 780px){
+		
+		/* Header******/
+			h1, h2 { font-size: 1.5em; }
+		 	nav ul li { font-size: 0.9em; margin: 10px;}
+			.head ul li:nth-child(1) a , span { font-size: 0.6em; }
+		 	.banner p { font-size: 0.9em; }
+		
+		/* Main ******/
+			main { max-width: 80%;  }
+		 	.boxes { flex-direction: column;}
+		 	.boxes div img { flex-grow: 1; }
+		  	.grid { flex-wrap: wrap; }
+		 	.grid div{ flex-grow: 1; }
+		 	.texto p{ font-size: 0.9em; }
 
-	@media (max-width: 800px){
- 	.boxes{ flex-wrap: wrap;}
-  	.grid { flex-wrap: wrap; }
- 	.grid div{ flex-grow: 1; }
+		  /* Footer ****/
+		 	.atencion{ font-size: 0.7em;}
+		 	h2 + p { font-size: 0.8em; }
+		 	
+	 }
+	/* Mobile ***************************************************/
+	@media screen and (max-width: 400px){
+		
+		/* Header******/
+	 		h1, h2 { font-size: 1.5em; }
+			nav ul li { font-size: 0.8em; margin: 5px; }
+			.head ul li:nth-child(1) a , span { font-size: 0.5em; }
+			.banner p { font-size: 0.7em; }
+		
+		/* Main ******/
+			main { width: 90%; }
+			.boxes div{ flex-direction: column; }
+			.atencion{  font-size: 0.6em;}
+		 	.texto p{ font-size: 0.8em; }
+		
+		 /* Footer ****/
+		 	.banner p { font-size: 0.6em; }
+		 	.atencion ul li { padding: 5px; font: 1em Scout-Regular; }
+
 
 	 }
-
 }
+
 /* Fonts ************************************************************************************************************/
+
 	@font-face {
     font-family: Scout-Bold;
     src: url(../fonts/Scout-Bold.otf);
