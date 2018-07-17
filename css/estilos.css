@@ -4,7 +4,7 @@
 *{	padding: 0;	margin: 0;}
 main{	max-width: 1200px;	margin: auto;	text-align: center;	}
 ul{	list-style: none;} a{	text-decoration: none; color: black;  }
-a[href="red"] { text-indent: -200000px; display: block; height: 35px; width: 32px; }
+a[href="red"] { text-indent: -200000px; display: block; height: 35px; width: 33px; }
 p { font-family:Scout-Regular;  }
 h1,h2,h3 { text-transform: uppercase; padding: 10px; }
 h1{	 font: 2.7em 'ScoutCond-Regular'; text-align: center;}
@@ -114,7 +114,7 @@ p > a { font-family:Scout-Thin; }
 		/* Header******/
 			h1, h2 { font-size: 1.5em; }
 		 	nav ul li { font-size: 0.9em; margin: 10px;}
-			.head ul li:nth-child(1) a , span { font-size: 0.6em; }
+			.head ul li:nth-child(1) a , span { font-size: 0.6em; padding-top:5px; }
 		 	.banner p { font-size: 0.9em; }
 		
 		/* Main ******/
