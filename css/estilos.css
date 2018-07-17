@@ -4,7 +4,7 @@
 *{	padding: 0;	margin: 0;}
 main{	max-width: 1200px;	margin: auto;	text-align: center;	}
 ul{	list-style: none;} a{	text-decoration: none; color: black;  }
-a[href="red"] { text-indent: -200000px; display: block; height: 35px; width: 30px; }
+a[href="red"] { text-indent: -200000px; display: block; height: 35px; width: 32px; }
 p { font-family:Scout-Regular;  }
 h1,h2,h3 { text-transform: uppercase; padding: 10px; }
 h1{	 font: 2.7em 'ScoutCond-Regular'; text-align: center;}
