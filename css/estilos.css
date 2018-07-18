@@ -3,14 +3,15 @@
 /* General **********************************************************************************************/
 *{	padding: 0;	margin: 0;}
 main{	max-width: 1200px;	margin: auto;	text-align: center;	}
-ul{	list-style: none;} a{	text-decoration: none; color: black;  }
+ul{	list-style: none;} 
+a{	text-decoration: none; color: black;  }
 a[href="red"] { text-indent: -200000px; display: block; height: 35px; width: 33px; }
 p { font-family:Scout-Regular;  }
 h1,h2,h3 { text-transform: uppercase; padding: 10px; }
 h1{	 font: 2.7em 'ScoutCond-Regular'; text-align: center;}
 h2{	 font: 2.5em 'ScoutCond-Regular';  }
 h3{  font: 1.2em 'ScoutCond-Regular';}
-img {max-width: 100%;}
+img {width: 100%; height: auto; }
 
 /* Encabezado *****************************************************************************************/
 
@@ -20,7 +21,9 @@ img {max-width: 100%;}
 		color: white;
 		display: flex;
 		justify-content: space-between;
-		background: #262626;	}
+		background: #262626;
+		}
+
 	.head ul { display: flex;  }
 	.head ul li:nth-child(1) a {color: white;  display: block; margin-top: 7px; font: 1em ScoutCond-Regular; letter-spacing: 2px;}
 	.head ul li:nth-child(2) a {background: url(../images/Estudio12-Challenge_03.jpg) no-repeat center; border-right: 1px solid white; }
@@ -31,7 +34,12 @@ img {max-width: 100%;}
 
 /* Menu / Botonera  *********************************************************************************************/
 
-nav ul, .redes ul {	display: flex;	flex-direction: center;	justify-content: center; flex-wrap: wrap;}
+nav ul, .redes ul {
+	display: flex;	
+	flex-direction: center;
+	justify-content: center;
+	 flex-wrap: wrap;
+	}
 nav ul li { font: 1.2em ScoutCond-Regular ; }
 nav ul li, .redes ul li { margin: 15px; }
 
@@ -44,15 +52,15 @@ p > a { font-family:Scout-Thin; }
 /* Slider Responsive ********************************************************************************************/
 
 @keyframes slider {
-0% { left: 0%; }
-20% { left: 0%; }
-25% { left: -100%; }
-45% { left: -100%; }
-50% { left: -200%; }
-70% { left: -200%; }
-75% { left: -300%; }
-95% { left: -300%; }
-100% { left: -400%; }}
+		0% { left: 0%; }
+		20% { left: 0%; }
+		25% { left: -100%; }
+		45% { left: -100%; }
+		50% { left: -200%; }
+		70% { left: -200%; }
+		75% { left: -300%; }
+		95% { left: -300%; }
+		100% { left: -400%; }}
 
 .slider { overflow: hidden; }
 .slider figure img { width: 20%; float: left; }
@@ -73,21 +81,25 @@ p > a { font-family:Scout-Thin; }
 #hombres { background: url(../images/Estudio12-Challenge_0534.jpg) no-repeat top; display: inline-block; vertical-align: middle; }
 
  /* Galeria de imagenes final *************************************************************************/
-  
-  .galeria{ display: flex; justify-content: space-between; }
-
+   .boxes, .grid, .galeria {
+		display: flex;
+		display: -webkit-box;	
+		display: -moz-box;	
+		display: -ms-flexbox;	
+		display: -webkit-flex;	
+		}
+ 
 /* Boxes 1 y 2 ***************************************************************************************/
 
-	.boxes {display: flex; justify-content: space-between;}
-	.boxes div{ flex: 1; display: flex;}
+	.boxes div{  display: flex; flex: 1; height: auto;}
+	.boxes div img{  height: 100%;}
+
 
 /* Grilla Imagenes *****************************************************************************************/
 
-	.grid { display: flex;	 }
-	.grid div{	 }
 	.grid div:nth-child(2) { display: flex;	flex-direction: column;	}
-	.grid div img { max-width: 100%; }
-
+	.galeria{ justify-content: space-between; }
+	
 /* Texto loren ipsum ****************************************************************************************/
 	
 	h2 + p {  font-size: 1em; margin-bottom: 10px;}
@@ -114,12 +126,12 @@ p > a { font-family:Scout-Thin; }
 		/* Header******/
 			h1, h2 { font-size: 1.5em; }
 		 	nav ul li { font-size: 0.9em; margin: 10px;}
-			.head ul li:nth-child(1) a , span { font-size: 0.6em; padding-top:5px; }
+			.head ul li:nth-child(1) a, span { font-size: 0.6em; }
 		 	.banner p { font-size: 0.9em; }
-		
+		 		
 		/* Main ******/
 			main { max-width: 80%;  }
-		 	.boxes { flex-direction: column;}
+		 	.boxes { flex-direction: column; }
 		 	.boxes div img { flex-grow: 1; }
 		  	.grid { flex-wrap: wrap; }
 		 	.grid div{ flex-grow: 1; }
@@ -138,7 +150,7 @@ p > a { font-family:Scout-Thin; }
 			nav ul li { font-size: 0.8em; margin: 5px; }
 			.head ul li:nth-child(1) a , span { font-size: 0.5em; }
 			.banner p { font-size: 0.7em; }
-		
+					
 		/* Main ******/
 			main { width: 90%; }
 			.boxes div{ flex-direction: column; }
